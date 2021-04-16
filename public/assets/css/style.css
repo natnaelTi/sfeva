@@ -382,7 +382,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero .container {
-  padding-top: 80px;
+  padding-top: 130px;
 }
 
 #hero:before {
@@ -411,8 +411,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #hero div hr {
-    margin-top: -2px;
-    padding-top: -2px;
+    margin-top: -7px;
+    padding-top: -7px;
     margin-bottom: 30px;
     padding-bottom: 10px;
     border-top: 1px solid snow;
@@ -492,7 +492,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100vh;
   }
   #hero .container {
-    padding-top: 60px;
+    padding-top: 150px;
   }
   #hero h1 {
     font-size: 32px;

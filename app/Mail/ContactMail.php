@@ -31,6 +31,10 @@ class ContactMail extends Mailable
      */
     public function build()
     {
-        return $this->subject($this->email->subject)->from($this->email->email, $this->email->name)->to('info@soffeva.com')->view('email.contactmail');
+        return $this->from('info@soffeva.com')->
+            subject($this->email->subject)->
+            from($this->email->email, $this->email->name)->
+            to('info@soffeva.com')->
+            view('email.contactmail');
     }
 }

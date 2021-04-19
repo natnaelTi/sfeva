@@ -61,7 +61,7 @@
                     <input type="hidden" id="locale_name" name="locale" />
                 </form>
                 <a href="#" role="button" v-pre>
-                    @if (App::currentLocale() == "amh")
+                    @if (App::currentLocale() == "am")
                         <img class="img-fluid" src="assets/img/lang/am.png"/>
                         አማርኛ
                     @else

@@ -1,7 +1,9 @@
 <?php
 
+use App\Mail\ContactMail;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 /*
 |--------------------------------------------------------------------------
@@ -25,6 +27,15 @@ Route::post('/locale', function (Request $request) {
 
         return redirect()->back();
 })->name('locale');
+
+// Route::get('/contact', function () {
+//     return view('index')
+// });
+
+Route::post('/contact', function (Request $request) {
+    Mail::send(new ContactMail($request));
+    return redirect('/');
+});
 
 Route::get('/', function () {
     return view('index');

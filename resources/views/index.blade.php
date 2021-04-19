@@ -113,11 +113,17 @@
         <hr>
       <h1 class="text-left">{{ __("World Heritage Day") }}</h1>
       <h2>{{ __("Heritage") }}</h2>
-      <h3>{{ __(": property that descends to an heir") }}</h3>
-      <h3>{{ __(": something transmitted by or acquired from a predecessor : LEGACY, INHERITANCE") }}</h3>
-      <h3>{{ __(": TRADITION") }}</h3>
-      <h3>{{ __(": something possessed as a result of one's natural situation or birth : BIRTHRIGHT") }}</h3>
-      <a href="https://www.merriam-webster.com/dictionary/heritage#:~:text=1%20%3A%20property%20that%20descends%20to,heritage%20and%20should%20be%20preserved." class="text-small text-monospace merriam">{{ __("Merriam Webster") }}</a>
+      @if (App::currentLocale() === 'en')
+        <h3>{{ __(": property that descends to an heir") }}</h3>
+        <h3>{{ __(": something transmitted by or acquired from a predecessor : LEGACY, INHERITANCE") }}</h3>
+        <h3>{{ __(": TRADITION") }}</h3>
+        <h3>{{ __(": something possessed as a result of one's natural situation or birth : BIRTHRIGHT") }}</h3>
+        <a href="https://www.merriam-webster.com/dictionary/heritage#:~:text=1%20%3A%20property%20that%20descends%20to,heritage%20and%20should%20be%20preserved." class="text-small text-monospace merriam">{{ __("Merriam Webster") }}</a>
+    @else
+        <h3>{{ __(": የካበተ ሃብት፤ ጥሪት።") }}</h3>
+        <h3>{{ __(": እንደ ሃውልት፣ ሕንፃ፣ የእደጥበብ ውጤቶች፣ ... የመሳሰለ የአንድን ሃገር ጥንታዊ ታሪክ እና ባህል የሚያንፀባርቅ፣ ከትውልድ ወደ ትውልድ የተላለፈ እና የሚተላለፍ ቋሚ መረጃ።") }}</h3>
+        <a href="#" class="text-small text-monospace merriam">{{ __("ኣማርኛ መዝገበ ቃላት፤ የኢትዮጵያ ቋንቋዎች ጥናትና ምርምር ማእከል፤ አዲስ አበባ ዩኒቨርሲቲ፤ የካቲት 1993") }}</a>
+      @endif
       <a href="#about" class="btn-get-started scrollto">{{ __("Discover More") }}</a>
     </div>
   </section><!-- End Hero -->
@@ -128,33 +134,33 @@
     <section id="clients" class="clients">
       <div class="container">
 
-        <div class="row">
+        <div class="row justify-content-center">
 
           <div class="col-lg-auto col-md-auto col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="100">
-            <img src="assets/img/clients/ethiopian_heritage_trust.jpg" class="img-fluid" alt="{{ __("Ethiopian Heritage Trust") }}">
+            <a href="https://www.ethiopianheritagetrustuk.org/"><img src="assets/img/clients/ethiopian_heritage_trust.jpg" class="img-fluid" alt="{{ __("Ethiopian Heritage Trust") }}"></a>
           </div>
 
           <div class="col-lg-auto col-md-auto col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="200">
-            <img src="assets/img/clients/guramayne_art_center.jpg" class="img-fluid" alt="{{ __("Guramayne Art Center") }}">
+            <a href="https://www.facebook.com/guramayne.artcenter"><img src="assets/img/clients/guramayne_art_center.jpg" class="img-fluid" alt="{{ __("Guramayne Art Center") }}"></a>
           </div>
 
           <div class="col-lg-auto col-md-auto col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="300">
-            <img src="assets/img/clients/model_african_union.png" class="img-fluid" alt="{{ __("Model African Union") }}">
+            <a href="https://modelafricanunion.org/"><img src="assets/img/clients/model_african_union.png" class="img-fluid" alt="{{ __("Model African Union") }}"></a>
           </div>
 
           <div class="col-lg-auto col-md-auto col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="400">
-            <img src="assets/img/clients/urban_center.png" class="img-fluid" alt="{{ __("Urban Center, Kebet Eske Ketema") }}">
+            <a href="https://www.facebook.com/theurbancentereth/"><img src="assets/img/clients/urban_center.png" class="img-fluid" alt="{{ __("Urban Center, Kebet Eske Ketema") }}"></a>
           </div>
 
           <div class="col-lg-auto col-md-auto col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="500">
-            <img src="assets/img/clients/wey_addis_ababa_magazine.png" class="img-fluid" alt="{{ __("Wey Addis Ababa Magazine") }}">
+            <a href="#"><img src="assets/img/clients/wey_addis_ababa_magazine.png" class="img-fluid" alt="{{ __("Wey Addis Ababa Magazine") }}"></a>
           </div>
 
           <div class="col-lg-auto col-md-auto col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="600">
-            <img src="assets/img/clients/kebena_house.png" class="img-fluid" alt="{{ __("Kebena House") }}">
+            <a href="https://www.facebook.com/Kebena-House-Events-and-Co-Working-center-110290557223200/"><img src="assets/img/clients/kebena_house.png" class="img-fluid" alt="{{ __("Kebena House") }}"></a>
           </div>
           <div class="col-lg-auto col-md-auto col-6 d-flex align-items-center" data-aos="zoom-in" data-aos-delay="600">
-            <img src="assets/img/clients/neon_addis.png" class="img-fluid" alt="{{ __("Neon Addis") }}">
+            <a href="#"><img src="assets/img/clients/neon_addis.png" class="img-fluid" alt="{{ __("Neon Addis") }}"></a>
           </div>
 
         </div>
@@ -184,7 +190,7 @@
               <li><i class="ri-check-double-line"></i>{{ __("Youths: College and University Students") }}</li>
             </ul>
             <p class="font-italic">
-              {{ __("Contestents should bring their art works to the Ethiopian Heritage Trust Association's berue until May 25, 2021 (Africa Day).")}}
+              {{ __("Contestents should bring their art works to the Ethiopian Heritage Trust Association's berue from May 20, 2021 until June 4, 2021.")}}
             </p>
           </div>
         </div>
@@ -234,7 +240,7 @@
 
         <div class="section-title" data-aos="fade-left">
           <h2>{{ __("Submitted Art Works") }}</h2>
-          <p>{{("Take a look at submitted art works by our contestents.")}}</p>
+          <p>{{ __("Take a look at submitted art works by our contestents.") }}</p>
         </div>
 
         <div class="row" data-aos="fade-up" data-aos-delay="100">
@@ -764,13 +770,13 @@
           <div class="col-lg-5 col-md-6 footer-links">
             <h4>{{ __("Affilliates") }}</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">{{ __("Ethiopian Heritage Trust") }}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">{{ __("Urban Center, Kebet Eske Ketema")}}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">{{ __("Model Africa Union")}}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">{{ __("Guramayne Art Center")}}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.ethiopianheritagetrustuk.org/">{{ __("Ethiopian Heritage Trust") }}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.facebook.com/theurbancentereth/">{{ __("Urban Center, Kebet Eske Ketema")}}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://modelafricanunion.org/">{{ __("Model Africa Union")}}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.facebook.com/guramayne.artcenter">{{ __("Guramayne Art Center")}}</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">{{ __("Wey Addis Ababa Magazine")}}</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">{{ __("Seed Act")}}</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">{{ __("Kebena House")}}</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="https://www.facebook.com/Kebena-House-Events-and-Co-Working-center-110290557223200/">{{ __("Kebena House")}}</a></li>
               <li><i class="bx bx-chevron-right"></i> <a href="#">{{ __("Neon Addis")}}</a></li>
             </ul>
           </div>
